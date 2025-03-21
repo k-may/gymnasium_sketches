@@ -1,0 +1,13 @@
+#mixbox_glsl {
+  display: block;
+
+  height: 100vh;
+  width: 100vw;
+
+  canvas {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}

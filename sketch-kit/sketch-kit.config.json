@@ -1,0 +1,20 @@
+{
+    "sketches": {
+        "SketchKit": {
+            "date": "",
+            "author": "kevma"
+        },
+        "Palette": {
+            "date": "2025-03-21T14:35:24.111Z",
+            "author": "kevma"
+        },
+        "mixbox_glsl": {
+            "date": "2025-03-21T14:39:25.409Z",
+            "author": "kevma"
+        }
+    },
+    "include_modules": true,
+    "project": "gym",
+    "copyDependencies": true,
+    "version": "v1.6.0"
+}
