@@ -3,10 +3,10 @@ import {Renderer, Mesh, Transform, Camera, Box, Program, Orbit} from "ogl";
 import vertex from './agent_vertex.glsl';
 import fragment from "./agent_fragment.glsl";
 
-export default class Palette extends BaseSketch {
+export default class Palette_1 extends BaseSketch {
 
     constructor() {
-        super('Palette');
+        super('Palette_1');
     }
 
     async init() {

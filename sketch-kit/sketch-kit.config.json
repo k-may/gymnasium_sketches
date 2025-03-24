@@ -6,10 +6,17 @@
         },
         "Palette": {
             "date": "2025-03-21T14:35:24.111Z",
-            "author": "kevma"
+            "author": "kevma",
+            "children": [
+                "Palette_1"
+            ]
         },
         "mixbox_glsl": {
             "date": "2025-03-21T14:39:25.409Z",
+            "author": "kevma"
+        },
+        "Palette_1": {
+            "date": "2025-03-24T14:35:28.849Z",
             "author": "kevma"
         }
     },
