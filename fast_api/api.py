@@ -27,22 +27,25 @@ palette_exp = PPO.load("./fast_api/palette")
 palette_lin = PPO.load("./fast_api/palette_lin")
 
 class Observation(BaseModel):
-    target_color : list  # List of observation values
-    current_color : list
-
-
+    target : list  # List of observation values
+    current : list
+    type : Optional[str] = "LIN"
 
 @app.post("/predict")
-def predict(observation: Optional[Observation] = None, model: Optional[str] = "EXP"):
+def predict(observation: Optional[Observation] = None):
 
-
+    model = palette_lin
 
     if observation is None:
         target_color = np.random.randint(0, 255, 3)
         current_color = np.random.randint(0, 255, 3)
     else:
-        current_color = np.array(observation.current_color)
-        target_color = np.array(observation.target_color)
+        current_color = np.array(observation.current)
+        target_color = np.array(observation.target)
+
+        if observation.type == "EXP":
+            model = palette_exp
+
 
     result = []
     done = False
@@ -50,7 +53,7 @@ def predict(observation: Optional[Observation] = None, model: Optional[str] = "E
     while not done:
         count += 1
         obs = np.concatenate([current_color, target_color])
-        action, _ = palette_exp.predict(obs)
+        action, _ = model.predict(obs)
 
         step_size = 1
         if action == 0: current_color[0] += step_size  # Increase R

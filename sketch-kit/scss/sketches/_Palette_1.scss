@@ -4,10 +4,31 @@
   height: 100vh;
   width: 100vw;
 
+  //&.loading {
+    background-color: #2FA1D6;
+  //}
+
   canvas {
     display: block;
     position: fixed;
     width: 100%;
     height: 100%;
+    background-color: transparent;
+  }
+
+  button.button_reload {
+    position: absolute;
+    right: 3rem;
+    bottom: 2rem;
+
+    font-family: sans-serif;
+
+    background: #2FA1D6;
+    border-radius: 1em;
+    padding: .5em 1em;
+
+    &:hover {
+      background: color-mix(in srgb, #2FA1D6, #000 10%);
+    }
   }
 }
